@@ -156,7 +156,7 @@ def welcome():
     # welcome message
     print('\nLabel Generator V1.0.0')
     print('Diseñado y creado por Marcos Suarez  para personal del área de Archivos.')
-    print('Contacto: corruptedkeep@proton.me LinkedIn: https://linkedin.com/in/marcossuarezit')
+    print('LinkedIn: https://linkedin.com/in/marcossuarezit')
     print('Repositorio oficial en https://github.com/nishinodaiku/labelgenx')
     print('\nEste programa está licenciado bajo la Licencia MIT.')
     print('Puedes usar, modificar y distribuir este software bajo los términos de esta licencia.\n')
