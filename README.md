@@ -103,7 +103,6 @@ This project is licensed under the MIT License. See `LICENSE` for details.
 
 ### **Author**
 - **Name**: Marcos Suarez  
-- **Contact**: [corruptedkeep@proton.me](mailto:corruptedkeep@proton.me)  
 - **GitHub**: [https://github.com/nishinodaiku](https://github.com/nishinodaiku)  
 - **LinkedIn**: [Marcos Suarez](https://linkedin.com/in/marcossuarezit)  
 
