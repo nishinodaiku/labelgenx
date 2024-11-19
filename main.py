@@ -80,6 +80,7 @@ def load_bp():
             quit()
     return wb
 
+# this builds the path and filename
 def save_path():
     user_profile = os.environ['USERPROFILE']
     current_time = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -96,7 +97,7 @@ def generator():
     total_pages = pages()
     starting_label = label()
     # all this configuration tries to imitate the old script to ensure compatibility
-    # of the label sheets used during printing
+    # have in mind page borders should be configured in a special way
     columns = ['A', 'C', 'E', 'G', 'I']
     rows_per_page = 25
     font1 = Font(name='Code39HalfInch', size=20)
@@ -143,13 +144,15 @@ def generator():
     # removing the sheet used as blueprint from the new file before saving
     wb.remove(blueprint)
 
-    print(f'\nIntentando generar archivo...')    
+    print(f'\nIntentando generar archivo...')
+    #we save the file and...
     try:
         wb.save(save_path())
     except Exception as e:
+        #maybe not
         print('Ocurrio un error. Codigo {e}')
         quit()
-
+    # we are done
     print('\nArchivo generado exitosamente. Saliendo del programa...')
 
 def welcome():
