@@ -13,7 +13,7 @@ from datetime import datetime
 def pages():
     # this function is in charge of getting the number of pages the user wants to print
     while True:
-        pgs = input('Ingrese cantidad de planchas a generar: ')
+        pgs = input('Ingrese cantidad de paginas a generar: ')
         try:
             pgs = int(pgs)
         except:
@@ -24,7 +24,7 @@ def pages():
             quit()
         else:
             print(f'\nSe generaran {pgs*65} etiquetas del tipo "LEG" y {pgs*65} del tipo "PAG".')
-            print(f'Seran un total de {pgs*65*2} etiquetas que utilizara {pgs*2} planchas.')
+            print(f'Seran un total de {pgs*65*2} etiquetas que utilizara {pgs*2} planchas de etiquetas.')
             ur = user_response(input('Desea continuar? (Y/n): '))
             if ur == 0:
                 break
@@ -111,10 +111,10 @@ def generator():
             for col in columns:
                 cell1 = f'{col}{current_row}'
                 cell2 = f'{col}{current_row + 1}'
-                master_sheet[cell1] = f'*{current_label}LEG*'
+                master_sheet[cell1] = f'*{current_label} LEG*'
                 master_sheet[cell1].font = font1
                 master_sheet[cell1].alignment = Alignment(horizontal='center',vertical='bottom')
-                master_sheet[cell2] = f'{current_label}LEG'
+                master_sheet[cell2] = f'{current_label} LEG'
                 master_sheet[cell2].font = font2
                 master_sheet[cell2].alignment = Alignment(horizontal='center',vertical='top')
                 current_label += 1
@@ -127,10 +127,10 @@ def generator():
             for col in columns:
                 cell1 = f'{col}{current_row}'
                 cell2 = f'{col}{current_row + 1}'
-                master_sheet[cell1] = f'*{current_label}PAG*'
+                master_sheet[cell1] = f'*{current_label} PAG*'
                 master_sheet[cell1].font = font1
                 master_sheet[cell1].alignment = Alignment(horizontal='center',vertical='bottom')
-                master_sheet[cell2] = f'{current_label}PAG'
+                master_sheet[cell2] = f'{current_label} PAG'
                 master_sheet[cell2].font = font2
                 master_sheet[cell2].alignment = Alignment(horizontal='center',vertical='top')
                 current_label += 1
